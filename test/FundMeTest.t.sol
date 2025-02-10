@@ -13,8 +13,8 @@ contract FundMeTest is Test {
     uint256 startingFunds = 1e18;
 
     function setUp() public {
-       deployFundMe = new DeployFundMe();
-       fundMe = deployFundMe.run();
+        deployFundMe = new DeployFundMe();
+        fundMe = deployFundMe.run();
     }
 
     modifier userDeposit() {
@@ -34,6 +34,5 @@ contract FundMeTest is Test {
 
         assertEq(address(fundMe).balance, 0);
         assertEq(address(Funder).balance, startingFunds);
-       
     }
 }

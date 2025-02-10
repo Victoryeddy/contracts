@@ -54,5 +54,4 @@ contract FundMe is ReentrancyGuard {
     receive() external payable {
         deposit();
     }
-
 }
